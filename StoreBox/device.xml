@@ -1,0 +1,74 @@
+﻿<?xml version="1.0"?>
+<StoreBoxConfig>
+  <Id>31010100010101</Id>
+  <Type>V100R001C00</Type>
+  <Version>1.0.328</Version>
+  <AssetSn>8001001001001</AssetSn>
+  <DataCard>13001010101</DataCard>
+  <IpAddress />
+  <Port>0</Port>
+  <PhyLinkType>1</PhyLinkType>
+  <ControlCabinetLocation>2</ControlCabinetLocation>
+  <Peripherals>
+    <Peripheral>
+      <Code>31010100010101002</Code>
+      <Name>主控</Name>
+      <AssetSn>8001001001001001</AssetSn>
+      <Type>1</Type>
+      <Version>1.0</Version>
+      <Memo />
+    </Peripheral>
+    <Peripheral>
+      <Code>31010100010101003</Code>
+      <Name>读卡器</Name>
+      <AssetSn>8001001001001002</AssetSn>
+      <Type>2</Type>
+      <Version>1.0</Version>
+      <Memo />
+    </Peripheral>
+    <Peripheral>
+      <Code>31010100010101003</Code>
+      <Name>扫描抢</Name>
+      <AssetSn>8001001001001003</AssetSn>
+      <Type>3</Type>
+      <Version>1.0</Version>
+      <Memo />
+    </Peripheral>
+    <Peripheral>
+      <Code>31010100010101002</Code>
+      <Name>投币器</Name>
+      <AssetSn>8001001001001005</AssetSn>
+      <Type>5</Type>
+      <Version>1.0</Version>
+      <Memo />
+    </Peripheral>
+    <Peripheral>
+      <Code>31010100010101007</Code>
+      <Name>触屏</Name>
+      <AssetSn>8001001001001007</AssetSn>
+      <Type>7</Type>
+      <Version>1.0</Version>
+      <Memo />
+    </Peripheral>
+  </Peripherals>
+  <CabinetContainers>
+    <CabinetContainer>
+      <Code>3101010001010101</Code>
+      <Index>01</Index>
+      <Type>1</Type>
+      <Version>1.0</Version>
+      <AssetSn>8001001001001007</AssetSn>
+      <Width>2</Width>
+      <Height>10</Height>
+    </CabinetContainer>
+    <CabinetContainer>
+      <Code>3101010001010103</Code>
+      <Index>03</Index>
+      <Type>1</Type>
+      <Version>1.0</Version>
+      <AssetSn>8001001001001008</AssetSn>
+      <Width>2</Width>
+      <Height>10</Height>
+    </CabinetContainer>
+  </CabinetContainers>
+</StoreBoxConfig>

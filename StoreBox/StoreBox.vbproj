@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E89DD89-24FB-4FDC-ABC8-7792F42D9E77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>StoreBox</RootNamespace>
+    <AssemblyName>StoreBox</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Main.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StoreBox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StoreBox.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net35-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="sms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\sms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDBOperation.vb" />
+    <Compile Include="CommandDispatcher.vb" />
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AllFuFeiTouBi.Designer.vb">
+      <DependentUpon>Frm_AllFuFeiTouBi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AllFuFeiTouBi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AllFuFeiTouBiTiShi.Designer.vb">
+      <DependentUpon>Frm_AllFuFeiTouBiTiShi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_AllFuFeiTouBiTiShi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_FuFeiXuZhi.Designer.vb">
+      <DependentUpon>Frm_FuFeiXuZhi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_FuFeiXuZhi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GuanLiYuanYeWuXuanZe.Designer.vb">
+      <DependentUpon>Frm_GuanLiYuanYeWuXuanZe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GuanLiYuanYeWuXuanZe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_JiCunFuFeiXuZhi.Designer.vb">
+      <DependentUpon>Frm_JiCunFuFeiXuZhi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_JiCunFuFeiXuZhi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_JiJianRenShouJi.Designer.vb">
+      <DependentUpon>Frm_JiJianRenShouJi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_JiJianRenShouJi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KaiXiangBaoQianTiShi.Designer.vb">
+      <DependentUpon>Frm_KaiXiangBaoQianTiShi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KaiXiangBaoQianTiShi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KaiXiangMiMa.Designer.vb">
+      <DependentUpon>Frm_KaiXiangMiMa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KaiXiangMiMa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KaiXiangYeWuXuanZe.Designer.vb">
+      <DependentUpon>Frm_KaiXiangYeWuXuanZe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KaiXiangYeWuXuanZe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KuaiDiDanHaoShuRu.Designer.vb">
+      <DependentUpon>Frm_KuaiDiDanHaoShuRu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KuaiDiDanHaoShuRu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KuaiDiDanSaoMiao.Designer.vb">
+      <DependentUpon>Frm_KuaiDiDanSaoMiao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KuaiDiDanSaoMiao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KuaiDiGongSiXuanZe.Designer.vb">
+      <DependentUpon>Frm_KuaiDiGongSiXuanZe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KuaiDiGongSiXuanZe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KuaiDiYuanYeWuXuanZe.Designer.vb">
+      <DependentUpon>Frm_KuaiDiYuanYeWuXuanZe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_KuaiDiYuanYeWuXuanZe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MiMaShuRu.Designer.vb">
+      <DependentUpon>Frm_MiMaShuRu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MiMaShuRu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_PeiZhiYeWu.Designer.vb">
+      <DependentUpon>Frm_PeiZhiYeWu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PeiZhiYeWu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ShouJianRenShouJi.Designer.vb">
+      <DependentUpon>Frm_ShouJianRenShouJi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ShouJianRenShouJi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ShouYe.designer.vb">
+      <DependentUpon>Frm_ShouYe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ShouYe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ShuaKaKaiXiangQueRenShenFen.Designer.vb">
+      <DependentUpon>Frm_ShuaKaKaiXiangQueRenShenFen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ShuaKaKaiXiangQueRenShenFen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ShuaKaQueRenShenFen.Designer.vb">
+      <DependentUpon>Frm_ShuaKaQueRenShenFen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ShuaKaQueRenShenFen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_WeiHuYeWu.Designer.vb">
+      <DependentUpon>Frm_WeiHuYeWu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_WeiHuYeWu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_WeiHuYeWuXuanZe.Designer.vb">
+      <DependentUpon>Frm_WeiHuYeWuXuanZe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_WeiHuYeWuXuanZe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_WuXiangQueRen.Designer.vb">
+      <DependentUpon>Frm_WuXiangQueRen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_WuXiangQueRen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_XuanZeWuXiang.Designer.vb">
+      <DependentUpon>Frm_XuanZeWuXiang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_XuanZeWuXiang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_YeWuBanLi.Designer.vb">
+      <DependentUpon>Frm_YeWuBanLi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_YeWuBanLi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_YeWuWanChengTiShi.Designer.vb">
+      <DependentUpon>Frm_YeWuWanChengTiShi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_YeWuWanChengTiShi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_YouJiNeiRongQueRen.Designer.vb">
+      <DependentUpon>Frm_YouJiNeiRongQueRen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_YouJiNeiRongQueRen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_YuQiFuWuTiShi.Designer.vb">
+      <DependentUpon>Frm_YuQiFuWuTiShi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_YuQiFuWuTiShi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModulePlatformCommunication.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StoreBoxModel.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AllFuFeiTouBi.resx">
+      <DependentUpon>Frm_AllFuFeiTouBi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_AllFuFeiTouBiTiShi.resx">
+      <DependentUpon>Frm_AllFuFeiTouBiTiShi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_FuFeiXuZhi.resx">
+      <DependentUpon>Frm_FuFeiXuZhi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GuanLiYuanYeWuXuanZe.resx">
+      <DependentUpon>Frm_GuanLiYuanYeWuXuanZe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_JiCunFuFeiXuZhi.resx">
+      <DependentUpon>Frm_JiCunFuFeiXuZhi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_JiJianRenShouJi.resx">
+      <DependentUpon>Frm_JiJianRenShouJi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KaiXiangBaoQianTiShi.resx">
+      <DependentUpon>Frm_KaiXiangBaoQianTiShi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KaiXiangMiMa.resx">
+      <DependentUpon>Frm_KaiXiangMiMa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KaiXiangYeWuXuanZe.resx">
+      <DependentUpon>Frm_KaiXiangYeWuXuanZe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KuaiDiDanHaoShuRu.resx">
+      <DependentUpon>Frm_KuaiDiDanHaoShuRu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KuaiDiDanSaoMiao.resx">
+      <DependentUpon>Frm_KuaiDiDanSaoMiao.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KuaiDiGongSiXuanZe.resx">
+      <DependentUpon>Frm_KuaiDiGongSiXuanZe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KuaiDiYuanYeWuXuanZe.resx">
+      <DependentUpon>Frm_KuaiDiYuanYeWuXuanZe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MiMaShuRu.resx">
+      <DependentUpon>Frm_MiMaShuRu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_PeiZhiYeWu.resx">
+      <DependentUpon>Frm_PeiZhiYeWu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ShouJianRenShouJi.resx">
+      <DependentUpon>Frm_ShouJianRenShouJi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ShouYe.resx">
+      <DependentUpon>Frm_ShouYe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ShuaKaKaiXiangQueRenShenFen.resx">
+      <DependentUpon>Frm_ShuaKaKaiXiangQueRenShenFen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ShuaKaQueRenShenFen.resx">
+      <DependentUpon>Frm_ShuaKaQueRenShenFen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_WeiHuYeWu.resx">
+      <DependentUpon>Frm_WeiHuYeWu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_WeiHuYeWuXuanZe.resx">
+      <DependentUpon>Frm_WeiHuYeWuXuanZe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_WuXiangQueRen.resx">
+      <DependentUpon>Frm_WuXiangQueRen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_XuanZeWuXiang.resx">
+      <DependentUpon>Frm_XuanZeWuXiang.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_YeWuBanLi.resx">
+      <DependentUpon>Frm_YeWuBanLi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_YeWuWanChengTiShi.resx">
+      <DependentUpon>Frm_YeWuWanChengTiShi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_YouJiNeiRongQueRen.resx">
+      <DependentUpon>Frm_YouJiNeiRongQueRen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_YuQiFuWuTiShi.resx">
+      <DependentUpon>Frm_YuQiFuWuTiShi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\02-06.png" />
+    <None Include="Resources\02-04.png" />
+    <None Include="Resources\02-061.png" />
+    <None Include="Resources\02-05.png" />
+    <None Include="Resources\02-03.png" />
+    <None Include="Resources\02-02.png" />
+    <None Include="Resources\03-02.png" />
+    <None Include="Resources\06-02.png" />
+    <None Include="Resources\06-04.png" />
+    <None Include="Resources\06-05.png" />
+    <None Include="Resources\07-03.png" />
+    <None Include="Resources\09-03.png" />
+    <None Include="Resources\12-02.png" />
+    <None Include="Resources\12-04.png" />
+    <None Include="Resources\7寄件人手机号.png" />
+    <None Include="Resources\7寄件人手机号1.png" />
+    <None Include="Resources\7寄件人手机号2.png" />
+    <None Include="Resources\19-05.png" />
+    <None Include="Resources\19-03.png" />
+    <None Include="Resources\19-04.png" />
+    <None Include="Resources\24-03.png" />
+    <None Include="Resources\25-02.png" />
+    <None Include="Resources\25-01.png" />
+    <None Include="Resources\29-06.png" />
+    <None Include="Resources\28-03.png" />
+    <None Include="Resources\28-02.png" />
+    <None Include="Resources\无标题.png" />
+    <None Include="Resources\28-05.png" />
+    <None Include="Resources\28-07.png" />
+    <None Include="Resources\28-10.png" />
+    <None Include="Resources\28-06.png" />
+    <Content Include="device.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\绿色 大1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.ico" />
+    <None Include="Resources\绿色 大.png" />
+    <None Include="Resources\xb-logo.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\LOGO.bmp" />
+    <None Include="Resources\01-01.png" />
+    <Content Include="Resources\Prev.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoreBox.Config\StoreBox.Config.csproj">
+      <Project>{c60ae07d-5e8c-4cd8-97cc-e54b95c12aaa}</Project>
+      <Name>StoreBox.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XB.API\XB.API.csproj">
+      <Project>{873589EB-4D1B-4859-A177-3613A3DE171A}</Project>
+      <Name>XB.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
